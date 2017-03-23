@@ -1,28 +1,22 @@
 import { AppComponent } from './app.component';
 
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { TestBed , inject} from '@angular/core/testing';
 import { By }           from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-describe('AppComponent', function () {
-  let de: DebugElement;
-  let comp: AppComponent;
-  let fixture: ComponentFixture<AppComponent>;
+export function main() {
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ AppComponent ]
-    })
-    .compileComponents();
-  }));
+  describe('AppComponent Test', () => {
+    beforeEach(() => {
+      TestBed.configureTestingModule({
+        providers: [
+          AppComponent
+        ]
+      });
+    });
+    it('Test - AppComponent Should Define.', inject([AppComponent], (cmp:any) => {
+      expect(cmp).toBeDefined()
+    }));
 
-  beforeEach(() => {
-    TestBed.compileComponents();
-    fixture = TestBed.createComponent(AppComponent);
-    comp = fixture.componentInstance;
   });
-
-  TestBed.compileComponents();
-  it('should create component', () => expect(comp).toBeDefined() );
-
-});
+}
