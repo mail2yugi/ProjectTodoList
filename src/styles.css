@@ -1,0 +1,59 @@
+h1 {
+  color: #369;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 250%;
+}
+
+.sidebar {
+  background-color: #222222 !important;
+  margin-top: -1px;
+  max-width: 50px;
+  min-width: 50px;
+}
+
+.search-input {
+  margin-left: 60% !important;
+  position: absolute;
+  margin-top: -43px !important;
+  z-index: 1111;
+}
+
+.bread-link {
+  text-decoration: underline !important;
+  color: #337ab7 !important;
+  cursor: pointer;
+}
+.bread-link:hover {
+  color: white !important;
+}
+
+.table-sortable > thead > tr > th {
+  cursor: pointer;
+  position: relative;
+  background-image: none;
+}
+
+.table-sortable > thead > tr > th:after,
+.table-sortable > thead > tr > th.sort-false:after,
+.table-sortable > thead > tr > th.sort-true:after {
+  font-family: FontAwesome;
+  padding-left: 5px;
+}
+
+.table-sortable > thead > tr > th:after {
+  content: "\f0dc";
+  color: #ddd;
+}
+.table-sortable > thead > tr > th.sort-false:after {
+  content: "\f0de";
+  color: #767676;
+}
+.table-sortable > thead > tr > th.sort-true:after {
+  content: "\f0dd";
+  color: #767676;
+}
+.main-container {
+  margin-left: 45px;
+  margin-top: 20px;
+  width: 97% !important;
+}

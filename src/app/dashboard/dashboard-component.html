@@ -1,0 +1,20 @@
+<form class="navbar-form navbar-right search-input">
+  <input type="text" class="form-control" type="text" [value]="filterText" placeholder="Search..." (keyup)="search($event)">
+</form>
+<div class="col-md-12 main-container">
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>Project Id</th>
+      <th>Project Name</th>
+      <th>Project Status</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ts-table-row [project]="project"  *ngFor="let project of rowData | todoFilter:filterText">
+    </tr>
+    </tbody>
+  </table>
+</div>
+<div>
+</div>

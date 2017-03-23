@@ -1,0 +1,18 @@
+<div class="col-md-12 main-container">
+  <div class="panel panel-default">
+    <div class="panel-heading">Project Information</div>
+    <div class="panel-body" style="height: 36vw;">
+      <form  *ngIf="projectData">
+        <div class="form-group">
+          <div class="row">
+            <div class="col-lg-6 form-group"><label>Project Name   </label> <span class="form-control">{{projectData.projectName}}</span></div>
+            <div class="col-lg-5 form-group"><label>Project Status   </label><span class="form-control">{{projectData.projectStatus}}</span></div>
+          </div>
+          <div class="row">
+            <div class="col-lg-6 form-group"><label>Project Id   </label> <span class="form-control">{{projectData.projectId}}</span></div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
